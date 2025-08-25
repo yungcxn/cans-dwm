@@ -1,16 +1,33 @@
-cans-dwm - my own dwm fork
-============================
+# cans-dwm - my own dwm fork
+
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 This fork of mine implements my config.
 
-Requirements
-------------
+## Dones and Todos
+
+- [x] Repository cleanup (e.g. `.def.h` or man-page removal)
+- [x] Custom `config.h` setup
+- [x] `~/.config/cans-dwm/autostart.sh` patch
+- [x] `-debug` arg to skip `autostart.sh` and run the `-debug.sh` script
+- [x] `smartkillclient` to jump back to last tag on empty tag window kill
+- [x] `movestack` to focus on stack
+- [x] `focustag` to focus tag by number
+- [x] `focusnext` and `focusprev` to focus cycle
+- [x] `tagandview` to move window and also view tag where window was moved to
+- [x] `spawntofree` to spawn windows on free workspaces
+- [x] `nexttagged` to cycle through workspaces
+- [x] `mfact` and `smfact` modification
+- [ ] `mfact` and `smfact` rewrite to calculate windows on the basis of pixel borders
+- [ ] Better bar rewrite
+
+## Requirements
+
 In order to build dwm you need the Xlib header files.
 
 
-Installation
-------------
+## Installation
+
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
 
@@ -20,8 +37,8 @@ necessary as root):
     make clean install
 
 
-Running dwm
------------
+## Running dwm
+
 Add the following line to your .xinitrc to start dwm using startx:
 
     exec exec-dwm
@@ -43,7 +60,7 @@ like this in your .xinitrc:
     exec cans-dwm
 
 
-Autostart
-----------
+## Autostart
+
 - `~/.config/cans-dwm/autostart.sh` is ran automatically
 - with `cans-dwm -debug` the `~/.config/cans-dwm/autostart-debug.sh` script is ran
