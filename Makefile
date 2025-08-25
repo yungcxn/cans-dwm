@@ -11,10 +11,7 @@ all: cans-dwm
 .c.o:
 	${CC} -c ${CFLAGS} $<
 
-${OBJ}: config.h config.mk
-
-config.h:
-	cp config.def.h $@
+${OBJ}: config.mk
 
 cans-dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
@@ -24,7 +21,7 @@ clean:
 
 dist: clean
 	mkdir -p cans-dwm-${VERSION}
-	cp -R LICENSE Makefile README config.def.h config.mk\
+	cp -R LICENSE Makefile README config.mk\
 		drw.h util.h ${SRC} dwm.png transient.c cans-dwm-${VERSION}
 	tar -cf cans-dwm-${VERSION}.tar cans-dwm-${VERSION}
 	gzip cans-dwm-${VERSION}.tar

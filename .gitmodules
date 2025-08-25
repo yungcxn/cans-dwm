@@ -1,0 +1,3 @@
+[submodule "cans-dwmblocks"]
+	path = cans-dwmblocks
+	url = https://github.com/torrinfail/dwmblocks
