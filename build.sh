@@ -1,4 +1,1 @@
-cd cans-dwmblocks
-make clean && make cans-dwmblocks
-cd ..
-make clean cans-dwm
+make clean cans-dwm install

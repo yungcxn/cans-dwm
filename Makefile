@@ -22,16 +22,15 @@ clean:
 dist: clean
 	mkdir -p cans-dwm-${VERSION}
 	cp -R LICENSE Makefile README config.mk\
-		drw.h util.h ${SRC} dwm.png transient.c cans-dwm-${VERSION}
+		drw.h util.h ${SRC} transient.c cans-dwm-${VERSION}
 	tar -cf cans-dwm-${VERSION}.tar cans-dwm-${VERSION}
 	gzip cans-dwm-${VERSION}.tar
 	rm -rf cans-dwm-${VERSION}
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp -f cans-dwm ${DESTDIR}${PREFIX}/bin
-	chmod 755 ${DESTDIR}${PREFIX}/bin/cans-dwm
-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
+	sudo cp -f cans-dwm ${DESTDIR}${PREFIX}/bin
+	sudo chmod 755 ${DESTDIR}${PREFIX}/bin/cans-dwm
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/cans-dwm
