@@ -4,7 +4,6 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 This fork of mine implements my config.
 
-
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
@@ -25,12 +24,12 @@ Running dwm
 -----------
 Add the following line to your .xinitrc to start dwm using startx:
 
-    exec dwm
+    exec exec-dwm
 
 In order to connect dwm to a specific display, make sure that
 the DISPLAY environment variable is set correctly, e.g.:
 
-    DISPLAY=foo.bar:1 exec dwm
+    DISPLAY=foo.bar:1 exec cans-dwm
 
 (This will start dwm on display :1 of the host foo.bar.)
 
@@ -41,5 +40,10 @@ like this in your .xinitrc:
     do
     	sleep 1
     done &
-    exec dwm
+    exec cans-dwm
 
+
+Autostart
+----------
+- `~/.config/cans-dwm/autostart.sh` is ran automatically
+- with `cans-dwm -debug` the `~/.config/cans-dwm/autostart-debug.sh` script is ran
